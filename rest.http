@@ -1,2 +1,15 @@
 ### checking if the server is live
 GET http://localhost:8000/
+
+
+# ================USER API ++++++++++++
+
+### post new user
+POST http://localhost:8000/api/v1/user
+Content-Type: application/json
+
+{
+    "name" : "manish",
+    "email" : "a@1231.com",
+    "pin" : 1234
+}

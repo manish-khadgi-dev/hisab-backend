@@ -14,6 +14,12 @@ app.use(express.json());
 app.use(cors());
 app.use(morgan("dev"));
 
+//routers
+import userRouter from "./src/router/userRouter.js";
+//user router to handle the uwer registration and login
+app.use("/api/v1/user", userRouter);
+//transaction router
+
 //uncaught router
 app.use("*", (req, res, next) => {
   const error = {
